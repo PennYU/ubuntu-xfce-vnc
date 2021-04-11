@@ -1,0 +1,12 @@
+FROM consol/ubuntu-xfce-vnc:latest
+
+USER root
+
+RUN apt-get update && apt-get upgrade -y && apt-get install -y \
+    apt-utils gcc g++ openssh-server build-essential gdb gdbserver rsync vim python-dev libssl-dev alien fakeroot unzip tmux && \
+    apt clean && \
+    apt autoremove -y
+
+RUN wget https://github.com/Kitware/CMake/releases/download/v3.9.2/cmake-3.9.2-linux-x86_64.tar.gz && \
+    tar xvf cmake-3.9.2-linux-x86_64.tar.gz -C /usr/local/ && \
+    rm -rf cmake-3.9.2-linux-x86_64.tar.gz
