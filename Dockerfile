@@ -3,7 +3,7 @@ FROM consol/ubuntu-xfce-vnc:latest
 USER root
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
-    apt-utils gcc g++ openssh-server build-essential gdb gdbserver rsync vim python-dev libssl-dev alien fakeroot unzip tmux && \
+    apt-utils gcc g++ openssh-server build-essential gdb gdbserver rsync vim python-dev libssl-dev alien fakeroot unzip tmux git && \
     apt clean && \
     apt autoremove -y
 
