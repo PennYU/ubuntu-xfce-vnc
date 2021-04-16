@@ -13,4 +13,4 @@ RUN wget https://github.com/Kitware/CMake/releases/download/v3.9.2/cmake-3.9.2-l
     rm -rf cmake-3.9.2-linux-x86_64.tar.gz
 
 RUN git config --global http.sslverify false && \
-    git config –global credential.helper store
+    git config --global credential.helper store
