@@ -12,4 +12,4 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     rm -rf cmake-3.9.2-linux-x86_64.tar.gz && \
     git config --global http.sslverify false && \
     git config --global credential.helper store && \
-    RUN echo "export PATH=\"/usr/local/cmake-3.9.2-Linux-x86_64/bin:\$PATH\"" >> ~/.bashrc
+    echo "export PATH=\"/usr/local/cmake-3.9.2-Linux-x86_64/bin:\$PATH\"" >> ~/.bashrc
